@@ -26,6 +26,7 @@
 		0440909F29D12D0500C5195C /* zPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440909E29D12D0500C5195C /* zPosition.m */; };
 		044090A229D134DA00C5195C /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090A129D134DA00C5195C /* HitTestViewController.m */; };
 		044090A529D1710B00C5195C /* Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090A429D1710B00C5195C /* Corner.m */; };
+		044090A829D1841300C5195C /* shadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090A729D1841300C5195C /* shadowPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,8 @@
 		044090A129D134DA00C5195C /* HitTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
 		044090A329D1710B00C5195C /* Corner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Corner.h; sourceTree = "<group>"; };
 		044090A429D1710B00C5195C /* Corner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Corner.m; sourceTree = "<group>"; };
+		044090A629D1841300C5195C /* shadowPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shadowPath.h; sourceTree = "<group>"; };
+		044090A729D1841300C5195C /* shadowPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shadowPath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				044090A129D134DA00C5195C /* HitTestViewController.m */,
 				044090A329D1710B00C5195C /* Corner.h */,
 				044090A429D1710B00C5195C /* Corner.m */,
+				044090A629D1841300C5195C /* shadowPath.h */,
+				044090A729D1841300C5195C /* shadowPath.m */,
 			);
 			path = Moudle;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				0440906A29C2DA4200C5195C /* SceneDelegate.m in Sources */,
 				044090A529D1710B00C5195C /* Corner.m in Sources */,
 				0440909629CDEB6000C5195C /* CALayerDelegateViewController.m in Sources */,
+				044090A829D1841300C5195C /* shadowPath.m in Sources */,
 				0440909329C9FFDB00C5195C /* CustomDrawRectView.m in Sources */,
 				0440909F29D12D0500C5195C /* zPosition.m in Sources */,
 			);
