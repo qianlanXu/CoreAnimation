@@ -15,6 +15,7 @@
 #import "HitTestViewController.h"
 #import "Corner.h"
 #import "shadowPath.h"
+#import "Mask.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -40,7 +41,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", nil];
+    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -88,6 +89,9 @@
         [self.navigationController pushViewController:viewController animated:YES];
     } else if (indexPath.row == 8) {
         shadowPath *viewController = [[shadowPath alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 9) {
+        Mask *viewController = [[Mask alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
