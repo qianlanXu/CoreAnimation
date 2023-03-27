@@ -10,6 +10,10 @@
 #import "ResizableImageWithCapInsets.h"
 #import "DrawRect.h"
 #import "CALayerDelegateViewController.h"
+#import "Clock.h"
+#import "zPosition.h"
+#import "HitTestViewController.h"
+#import "Corner.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -35,7 +39,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", nil];
+    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -68,6 +72,18 @@
         [self.navigationController pushViewController:ViewController animated:YES];
     } else if (indexPath.row == 3) {
         CALayerDelegateViewController *viewController = [[CALayerDelegateViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 4) {
+        Clock *viewController = [[Clock alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 5) {
+        zPosition *viewController = [[zPosition alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 6) {
+        HitTestViewController *viewController = [[HitTestViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 7) {
+        Corner *viewController = [[Corner alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

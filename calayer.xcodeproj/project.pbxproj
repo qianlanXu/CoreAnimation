@@ -21,6 +21,11 @@
 		0440909029C9A40C00C5195C /* CustomCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440908F29C9A40C00C5195C /* CustomCircleView.m */; };
 		0440909329C9FFDB00C5195C /* CustomDrawRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440909229C9FFDB00C5195C /* CustomDrawRectView.m */; };
 		0440909629CDEB6000C5195C /* CALayerDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440909529CDEB6000C5195C /* CALayerDelegateViewController.m */; };
+		0440909929CEFCCB00C5195C /* Clock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440909829CEFCCB00C5195C /* Clock.m */; };
+		0440909C29CEFDEA00C5195C /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440909B29CEFDEA00C5195C /* ClockView.m */; };
+		0440909F29D12D0500C5195C /* zPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440909E29D12D0500C5195C /* zPosition.m */; };
+		044090A229D134DA00C5195C /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090A129D134DA00C5195C /* HitTestViewController.m */; };
+		044090A529D1710B00C5195C /* Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090A429D1710B00C5195C /* Corner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,16 @@
 		0440909229C9FFDB00C5195C /* CustomDrawRectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDrawRectView.m; sourceTree = "<group>"; };
 		0440909429CDEB6000C5195C /* CALayerDelegateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALayerDelegateViewController.h; sourceTree = "<group>"; };
 		0440909529CDEB6000C5195C /* CALayerDelegateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALayerDelegateViewController.m; sourceTree = "<group>"; };
+		0440909729CEFCCB00C5195C /* Clock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clock.h; sourceTree = "<group>"; };
+		0440909829CEFCCB00C5195C /* Clock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clock.m; sourceTree = "<group>"; };
+		0440909A29CEFDEA00C5195C /* ClockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
+		0440909B29CEFDEA00C5195C /* ClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
+		0440909D29D12D0500C5195C /* zPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zPosition.h; sourceTree = "<group>"; };
+		0440909E29D12D0500C5195C /* zPosition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zPosition.m; sourceTree = "<group>"; };
+		044090A029D134DA00C5195C /* HitTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
+		044090A129D134DA00C5195C /* HitTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
+		044090A329D1710B00C5195C /* Corner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Corner.h; sourceTree = "<group>"; };
+		044090A429D1710B00C5195C /* Corner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Corner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +125,14 @@
 				0440908C29C9A39A00C5195C /* DrawRect.m */,
 				0440909429CDEB6000C5195C /* CALayerDelegateViewController.h */,
 				0440909529CDEB6000C5195C /* CALayerDelegateViewController.m */,
+				0440909729CEFCCB00C5195C /* Clock.h */,
+				0440909829CEFCCB00C5195C /* Clock.m */,
+				0440909D29D12D0500C5195C /* zPosition.h */,
+				0440909E29D12D0500C5195C /* zPosition.m */,
+				044090A029D134DA00C5195C /* HitTestViewController.h */,
+				044090A129D134DA00C5195C /* HitTestViewController.m */,
+				044090A329D1710B00C5195C /* Corner.h */,
+				044090A429D1710B00C5195C /* Corner.m */,
 			);
 			path = Moudle;
 			sourceTree = "<group>";
@@ -123,6 +146,8 @@
 				0440908F29C9A40C00C5195C /* CustomCircleView.m */,
 				0440909129C9FFDB00C5195C /* CustomDrawRectView.h */,
 				0440909229C9FFDB00C5195C /* CustomDrawRectView.m */,
+				0440909A29CEFDEA00C5195C /* ClockView.h */,
+				0440909B29CEFDEA00C5195C /* ClockView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,16 +223,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				0440906D29C2DA4200C5195C /* ViewController.m in Sources */,
+				0440909C29CEFDEA00C5195C /* ClockView.m in Sources */,
 				0440909029C9A40C00C5195C /* CustomCircleView.m in Sources */,
 				0440908D29C9A39A00C5195C /* DrawRect.m in Sources */,
 				0440906729C2DA4200C5195C /* AppDelegate.m in Sources */,
 				0440908629C851C400C5195C /* ResizableImageWithCapInsets.m in Sources */,
 				0440908A29C85E9200C5195C /* BezierPath.m in Sources */,
+				0440909929CEFCCB00C5195C /* Clock.m in Sources */,
 				0440907829C2DA4500C5195C /* main.m in Sources */,
+				044090A229D134DA00C5195C /* HitTestViewController.m in Sources */,
 				0440908329C3507B00C5195C /* CALayerViewController.m in Sources */,
 				0440906A29C2DA4200C5195C /* SceneDelegate.m in Sources */,
+				044090A529D1710B00C5195C /* Corner.m in Sources */,
 				0440909629CDEB6000C5195C /* CALayerDelegateViewController.m in Sources */,
 				0440909329C9FFDB00C5195C /* CustomDrawRectView.m in Sources */,
+				0440909F29D12D0500C5195C /* zPosition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
