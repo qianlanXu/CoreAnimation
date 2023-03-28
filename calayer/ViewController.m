@@ -16,6 +16,9 @@
 #import "Corner.h"
 #import "shadowPath.h"
 #import "Mask.h"
+#import "LCDClock.h"
+#import "ShouldRasterize.h"
+#import "AffineTransform.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -41,7 +44,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", nil];
+    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -92,6 +95,15 @@
         [self.navigationController pushViewController:viewController animated:YES];
     } else if (indexPath.row == 9) {
         Mask *viewController = [[Mask alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 10) {
+        LCDClock *viewController = [[LCDClock alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 11) {
+        ShouldRasterize *viewController = [[ShouldRasterize alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 12) {
+        AffineTransform *viewController = [[AffineTransform alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

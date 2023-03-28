@@ -66,6 +66,7 @@
     _hourHand.layer.anchorPoint = CGPointMake(0.5f, 0.7f);
     _minuteHand.layer.anchorPoint = CGPointMake(0.5f, 0.7f);
     _secondHand.layer.anchorPoint = CGPointMake(0.5f, 0.7f);
+    
 }
 
 - (void)layoutSubviews {

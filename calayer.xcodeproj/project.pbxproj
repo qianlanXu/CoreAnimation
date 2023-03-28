@@ -28,6 +28,9 @@
 		044090A529D1710B00C5195C /* Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090A429D1710B00C5195C /* Corner.m */; };
 		044090A829D1841300C5195C /* shadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090A729D1841300C5195C /* shadowPath.m */; };
 		044090AB29D18DF700C5195C /* Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090AA29D18DF700C5195C /* Mask.m */; };
+		044090AF29D27B3E00C5195C /* LCDClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090AE29D27B3E00C5195C /* LCDClock.m */; };
+		044090B329D28BB300C5195C /* ShouldRasterize.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090B229D28BB300C5195C /* ShouldRasterize.m */; };
+		044090B729D2943300C5195C /* AffineTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090B629D2943300C5195C /* AffineTransform.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,12 @@
 		044090A729D1841300C5195C /* shadowPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shadowPath.m; sourceTree = "<group>"; };
 		044090A929D18DF700C5195C /* Mask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mask.h; sourceTree = "<group>"; };
 		044090AA29D18DF700C5195C /* Mask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mask.m; sourceTree = "<group>"; };
+		044090AD29D27B3E00C5195C /* LCDClock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDClock.h; sourceTree = "<group>"; };
+		044090AE29D27B3E00C5195C /* LCDClock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCDClock.m; sourceTree = "<group>"; };
+		044090B129D28BB300C5195C /* ShouldRasterize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShouldRasterize.h; sourceTree = "<group>"; };
+		044090B229D28BB300C5195C /* ShouldRasterize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShouldRasterize.m; sourceTree = "<group>"; };
+		044090B529D2943300C5195C /* AffineTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AffineTransform.h; sourceTree = "<group>"; };
+		044090B629D2943300C5195C /* AffineTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AffineTransform.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +112,9 @@
 		0440906429C2DA4200C5195C /* calayer */ = {
 			isa = PBXGroup;
 			children = (
+				044090B429D2941A00C5195C /* 5.1 */,
+				044090B029D28B9D00C5195C /* 4.7 */,
+				044090AC29D27B2100C5195C /* 4.6 */,
 				0440908729C85E5800C5195C /* Views */,
 				0440908029C3259D00C5195C /* Moudle */,
 				0440906529C2DA4200C5195C /* AppDelegate.h */,
@@ -160,6 +172,33 @@
 				0440909B29CEFDEA00C5195C /* ClockView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		044090AC29D27B2100C5195C /* 4.6 */ = {
+			isa = PBXGroup;
+			children = (
+				044090AD29D27B3E00C5195C /* LCDClock.h */,
+				044090AE29D27B3E00C5195C /* LCDClock.m */,
+			);
+			path = 4.6;
+			sourceTree = "<group>";
+		};
+		044090B029D28B9D00C5195C /* 4.7 */ = {
+			isa = PBXGroup;
+			children = (
+				044090B129D28BB300C5195C /* ShouldRasterize.h */,
+				044090B229D28BB300C5195C /* ShouldRasterize.m */,
+			);
+			path = 4.7;
+			sourceTree = "<group>";
+		};
+		044090B429D2941A00C5195C /* 5.1 */ = {
+			isa = PBXGroup;
+			children = (
+				044090B529D2943300C5195C /* AffineTransform.h */,
+				044090B629D2943300C5195C /* AffineTransform.m */,
+			);
+			path = 5.1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0440906D29C2DA4200C5195C /* ViewController.m in Sources */,
+				044090B729D2943300C5195C /* AffineTransform.m in Sources */,
 				0440909C29CEFDEA00C5195C /* ClockView.m in Sources */,
 				0440909029C9A40C00C5195C /* CustomCircleView.m in Sources */,
 				0440908D29C9A39A00C5195C /* DrawRect.m in Sources */,
@@ -242,7 +282,9 @@
 				0440909929CEFCCB00C5195C /* Clock.m in Sources */,
 				0440907829C2DA4500C5195C /* main.m in Sources */,
 				044090A229D134DA00C5195C /* HitTestViewController.m in Sources */,
+				044090AF29D27B3E00C5195C /* LCDClock.m in Sources */,
 				0440908329C3507B00C5195C /* CALayerViewController.m in Sources */,
+				044090B329D28BB300C5195C /* ShouldRasterize.m in Sources */,
 				0440906A29C2DA4200C5195C /* SceneDelegate.m in Sources */,
 				044090A529D1710B00C5195C /* Corner.m in Sources */,
 				0440909629CDEB6000C5195C /* CALayerDelegateViewController.m in Sources */,
