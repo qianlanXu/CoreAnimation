@@ -31,6 +31,14 @@
 		044090AF29D27B3E00C5195C /* LCDClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090AE29D27B3E00C5195C /* LCDClock.m */; };
 		044090B329D28BB300C5195C /* ShouldRasterize.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090B229D28BB300C5195C /* ShouldRasterize.m */; };
 		044090B729D2943300C5195C /* AffineTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090B629D2943300C5195C /* AffineTransform.m */; };
+		044090BF29D2C45900C5195C /* Transform3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090BE29D2C45900C5195C /* Transform3D.m */; };
+		044090C229D2D36800C5195C /* Outer.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090C129D2D36800C5195C /* Outer.m */; };
+		044090C629D2DD5500C5195C /* Solid.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090C529D2DD5500C5195C /* Solid.m */; };
+		044090CE29D3D79100C5195C /* ShaperLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090CD29D3D79100C5195C /* ShaperLayer.m */; };
+		044090D129D3E7FC00C5195C /* TextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090D029D3E7FC00C5195C /* TextLayer.m */; };
+		044090D429D3F18D00C5195C /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090D329D3F18D00C5195C /* LayerLabel.m */; };
+		044090D729D41F6E00C5195C /* CubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090D629D41F6E00C5195C /* CubeViewController.m */; };
+		044090DA29D43DD400C5195C /* ReplicatorLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090D929D43DD400C5195C /* ReplicatorLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +88,22 @@
 		044090B229D28BB300C5195C /* ShouldRasterize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShouldRasterize.m; sourceTree = "<group>"; };
 		044090B529D2943300C5195C /* AffineTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AffineTransform.h; sourceTree = "<group>"; };
 		044090B629D2943300C5195C /* AffineTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AffineTransform.m; sourceTree = "<group>"; };
+		044090BD29D2C45900C5195C /* Transform3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transform3D.h; sourceTree = "<group>"; };
+		044090BE29D2C45900C5195C /* Transform3D.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transform3D.m; sourceTree = "<group>"; };
+		044090C029D2D36800C5195C /* Outer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Outer.h; sourceTree = "<group>"; };
+		044090C129D2D36800C5195C /* Outer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Outer.m; sourceTree = "<group>"; };
+		044090C429D2DD5500C5195C /* Solid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solid.h; sourceTree = "<group>"; };
+		044090C529D2DD5500C5195C /* Solid.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Solid.m; sourceTree = "<group>"; };
+		044090CC29D3D79100C5195C /* ShaperLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaperLayer.h; sourceTree = "<group>"; };
+		044090CD29D3D79100C5195C /* ShaperLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShaperLayer.m; sourceTree = "<group>"; };
+		044090CF29D3E7FC00C5195C /* TextLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextLayer.h; sourceTree = "<group>"; };
+		044090D029D3E7FC00C5195C /* TextLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextLayer.m; sourceTree = "<group>"; };
+		044090D229D3F18D00C5195C /* LayerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
+		044090D329D3F18D00C5195C /* LayerLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerLabel.m; sourceTree = "<group>"; };
+		044090D529D41F6E00C5195C /* CubeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeViewController.h; sourceTree = "<group>"; };
+		044090D629D41F6E00C5195C /* CubeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeViewController.m; sourceTree = "<group>"; };
+		044090D829D43DD400C5195C /* ReplicatorLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplicatorLayer.h; sourceTree = "<group>"; };
+		044090D929D43DD400C5195C /* ReplicatorLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +136,9 @@
 		0440906429C2DA4200C5195C /* calayer */ = {
 			isa = PBXGroup;
 			children = (
+				044090CB29D3D77400C5195C /* 6.1 */,
+				044090C329D2DAB700C5195C /* 5.3 */,
+				044090B829D2C3E800C5195C /* 5.2 */,
 				044090B429D2941A00C5195C /* 5.1 */,
 				044090B029D28B9D00C5195C /* 4.7 */,
 				044090AC29D27B2100C5195C /* 4.6 */,
@@ -201,6 +228,43 @@
 			path = 5.1;
 			sourceTree = "<group>";
 		};
+		044090B829D2C3E800C5195C /* 5.2 */ = {
+			isa = PBXGroup;
+			children = (
+				044090BD29D2C45900C5195C /* Transform3D.h */,
+				044090BE29D2C45900C5195C /* Transform3D.m */,
+				044090C029D2D36800C5195C /* Outer.h */,
+				044090C129D2D36800C5195C /* Outer.m */,
+			);
+			path = 5.2;
+			sourceTree = "<group>";
+		};
+		044090C329D2DAB700C5195C /* 5.3 */ = {
+			isa = PBXGroup;
+			children = (
+				044090C429D2DD5500C5195C /* Solid.h */,
+				044090C529D2DD5500C5195C /* Solid.m */,
+			);
+			path = 5.3;
+			sourceTree = "<group>";
+		};
+		044090CB29D3D77400C5195C /* 6.1 */ = {
+			isa = PBXGroup;
+			children = (
+				044090CC29D3D79100C5195C /* ShaperLayer.h */,
+				044090CD29D3D79100C5195C /* ShaperLayer.m */,
+				044090CF29D3E7FC00C5195C /* TextLayer.h */,
+				044090D029D3E7FC00C5195C /* TextLayer.m */,
+				044090D229D3F18D00C5195C /* LayerLabel.h */,
+				044090D329D3F18D00C5195C /* LayerLabel.m */,
+				044090D529D41F6E00C5195C /* CubeViewController.h */,
+				044090D629D41F6E00C5195C /* CubeViewController.m */,
+				044090D829D43DD400C5195C /* ReplicatorLayer.h */,
+				044090D929D43DD400C5195C /* ReplicatorLayer.m */,
+			);
+			path = 6.1;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,24 +336,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				0440906D29C2DA4200C5195C /* ViewController.m in Sources */,
+				044090BF29D2C45900C5195C /* Transform3D.m in Sources */,
+				044090DA29D43DD400C5195C /* ReplicatorLayer.m in Sources */,
+				044090CE29D3D79100C5195C /* ShaperLayer.m in Sources */,
 				044090B729D2943300C5195C /* AffineTransform.m in Sources */,
 				0440909C29CEFDEA00C5195C /* ClockView.m in Sources */,
 				0440909029C9A40C00C5195C /* CustomCircleView.m in Sources */,
 				0440908D29C9A39A00C5195C /* DrawRect.m in Sources */,
 				0440906729C2DA4200C5195C /* AppDelegate.m in Sources */,
 				0440908629C851C400C5195C /* ResizableImageWithCapInsets.m in Sources */,
+				044090D729D41F6E00C5195C /* CubeViewController.m in Sources */,
 				0440908A29C85E9200C5195C /* BezierPath.m in Sources */,
 				0440909929CEFCCB00C5195C /* Clock.m in Sources */,
 				0440907829C2DA4500C5195C /* main.m in Sources */,
 				044090A229D134DA00C5195C /* HitTestViewController.m in Sources */,
 				044090AF29D27B3E00C5195C /* LCDClock.m in Sources */,
+				044090C229D2D36800C5195C /* Outer.m in Sources */,
 				0440908329C3507B00C5195C /* CALayerViewController.m in Sources */,
 				044090B329D28BB300C5195C /* ShouldRasterize.m in Sources */,
 				0440906A29C2DA4200C5195C /* SceneDelegate.m in Sources */,
+				044090D429D3F18D00C5195C /* LayerLabel.m in Sources */,
 				044090A529D1710B00C5195C /* Corner.m in Sources */,
 				0440909629CDEB6000C5195C /* CALayerDelegateViewController.m in Sources */,
 				044090A829D1841300C5195C /* shadowPath.m in Sources */,
 				044090AB29D18DF700C5195C /* Mask.m in Sources */,
+				044090D129D3E7FC00C5195C /* TextLayer.m in Sources */,
+				044090C629D2DD5500C5195C /* Solid.m in Sources */,
 				0440909329C9FFDB00C5195C /* CustomDrawRectView.m in Sources */,
 				0440909F29D12D0500C5195C /* zPosition.m in Sources */,
 			);

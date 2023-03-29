@@ -19,6 +19,13 @@
 #import "LCDClock.h"
 #import "ShouldRasterize.h"
 #import "AffineTransform.h"
+#import "Transform3D.h"
+#import "Outer.h"
+#import "Solid.h"
+#import "ShaperLayer.h"
+#import "TextLayer.h"
+#import "CubeViewController.h"
+#import "ReplicatorLayer.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -44,7 +51,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", nil];
+    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", @"Transform3D", @"Outer", @"Solid", @"ShaperLayer", @"TextLayer", @"CubeViewController", @"ReplicatorLayer", nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -104,6 +111,27 @@
         [self.navigationController pushViewController:viewController animated:YES];
     } else if (indexPath.row == 12) {
         AffineTransform *viewController = [[AffineTransform alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 13) {
+        Transform3D *viewController = [[Transform3D alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 14) {
+        Outer *ViewController = [[Outer alloc] init];
+        [self.navigationController pushViewController:ViewController animated:YES];
+    } else if (indexPath.row == 15) {
+        Solid *viewController = [[Solid alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 16) {
+        ShaperLayer *viewController = [[ShaperLayer alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 17) {
+        TextLayer *viewController = [[TextLayer alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 18) {
+        CubeViewController *viewController = [[CubeViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 19) {
+        ReplicatorLayer *viewController = [[ReplicatorLayer alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

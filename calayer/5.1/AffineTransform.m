@@ -12,6 +12,7 @@
 @property (nonatomic, strong) UIView *layerView;
 
 @property (nonatomic, strong) UIView *secondLayerView;
+
 @end
 
 @implementation AffineTransform
