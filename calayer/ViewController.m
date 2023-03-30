@@ -26,6 +26,7 @@
 #import "TextLayer.h"
 #import "CubeViewController.h"
 #import "ReplicatorLayer.h"
+#import "EmitterLayer.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -51,7 +52,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", @"Transform3D", @"Outer", @"Solid", @"ShaperLayer", @"TextLayer", @"CubeViewController", @"ReplicatorLayer", nil];
+    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", @"Transform3D", @"Outer", @"Solid", @"ShaperLayer", @"TextLayer", @"CubeViewController", @"ReplicatorLayer", @"EmitterLayer", nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -132,6 +133,9 @@
         [self.navigationController pushViewController:viewController animated:YES];
     } else if (indexPath.row == 19) {
         ReplicatorLayer *viewController = [[ReplicatorLayer alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 20) {
+        EmitterLayer *viewController = [[EmitterLayer alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

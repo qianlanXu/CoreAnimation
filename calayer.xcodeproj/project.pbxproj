@@ -39,6 +39,7 @@
 		044090D429D3F18D00C5195C /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090D329D3F18D00C5195C /* LayerLabel.m */; };
 		044090D729D41F6E00C5195C /* CubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090D629D41F6E00C5195C /* CubeViewController.m */; };
 		044090DA29D43DD400C5195C /* ReplicatorLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090D929D43DD400C5195C /* ReplicatorLayer.m */; };
+		044090E029D560B900C5195C /* EmitterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090DF29D560B900C5195C /* EmitterLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,8 @@
 		044090D629D41F6E00C5195C /* CubeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeViewController.m; sourceTree = "<group>"; };
 		044090D829D43DD400C5195C /* ReplicatorLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplicatorLayer.h; sourceTree = "<group>"; };
 		044090D929D43DD400C5195C /* ReplicatorLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLayer.m; sourceTree = "<group>"; };
+		044090DE29D560B900C5195C /* EmitterLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmitterLayer.h; sourceTree = "<group>"; };
+		044090DF29D560B900C5195C /* EmitterLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmitterLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 		0440906429C2DA4200C5195C /* calayer */ = {
 			isa = PBXGroup;
 			children = (
+				044090DD29D5608500C5195C /* 粒子动画 */,
 				044090CB29D3D77400C5195C /* 6.1 */,
 				044090C329D2DAB700C5195C /* 5.3 */,
 				044090B829D2C3E800C5195C /* 5.2 */,
@@ -265,6 +269,15 @@
 			path = 6.1;
 			sourceTree = "<group>";
 		};
+		044090DD29D5608500C5195C /* 粒子动画 */ = {
+			isa = PBXGroup;
+			children = (
+				044090DE29D560B900C5195C /* EmitterLayer.h */,
+				044090DF29D560B900C5195C /* EmitterLayer.m */,
+			);
+			path = "粒子动画";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +352,7 @@
 				044090BF29D2C45900C5195C /* Transform3D.m in Sources */,
 				044090DA29D43DD400C5195C /* ReplicatorLayer.m in Sources */,
 				044090CE29D3D79100C5195C /* ShaperLayer.m in Sources */,
+				044090E029D560B900C5195C /* EmitterLayer.m in Sources */,
 				044090B729D2943300C5195C /* AffineTransform.m in Sources */,
 				0440909C29CEFDEA00C5195C /* ClockView.m in Sources */,
 				0440909029C9A40C00C5195C /* CustomCircleView.m in Sources */,
