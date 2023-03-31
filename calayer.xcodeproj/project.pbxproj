@@ -40,6 +40,9 @@
 		044090D729D41F6E00C5195C /* CubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090D629D41F6E00C5195C /* CubeViewController.m */; };
 		044090DA29D43DD400C5195C /* ReplicatorLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090D929D43DD400C5195C /* ReplicatorLayer.m */; };
 		044090E029D560B900C5195C /* EmitterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090DF29D560B900C5195C /* EmitterLayer.m */; };
+		044090EA29D6B39F00C5195C /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090E929D6B39F00C5195C /* AVPlayerViewController.m */; };
+		044090ED29D6B60200C5195C /* Ship.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 044090EC29D6B60100C5195C /* Ship.mp4 */; };
+		044090F129D6BCF000C5195C /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090F029D6BCF000C5195C /* TransactionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,11 @@
 		044090D929D43DD400C5195C /* ReplicatorLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLayer.m; sourceTree = "<group>"; };
 		044090DE29D560B900C5195C /* EmitterLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmitterLayer.h; sourceTree = "<group>"; };
 		044090DF29D560B900C5195C /* EmitterLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmitterLayer.m; sourceTree = "<group>"; };
+		044090E829D6B39F00C5195C /* AVPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerViewController.h; sourceTree = "<group>"; };
+		044090E929D6B39F00C5195C /* AVPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerViewController.m; sourceTree = "<group>"; };
+		044090EC29D6B60100C5195C /* Ship.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ship.mp4; sourceTree = "<group>"; };
+		044090EF29D6BCF000C5195C /* TransactionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionViewController.h; sourceTree = "<group>"; };
+		044090F029D6BCF000C5195C /* TransactionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,8 @@
 		0440906429C2DA4200C5195C /* calayer */ = {
 			isa = PBXGroup;
 			children = (
+				044090EE29D6BC9F00C5195C /* 隐式动画 */,
+				044090EB29D6B5DB00C5195C /* Resource */,
 				044090DD29D5608500C5195C /* 粒子动画 */,
 				044090CB29D3D77400C5195C /* 6.1 */,
 				044090C329D2DAB700C5195C /* 5.3 */,
@@ -255,6 +265,8 @@
 		044090CB29D3D77400C5195C /* 6.1 */ = {
 			isa = PBXGroup;
 			children = (
+				044090E829D6B39F00C5195C /* AVPlayerViewController.h */,
+				044090E929D6B39F00C5195C /* AVPlayerViewController.m */,
 				044090CC29D3D79100C5195C /* ShaperLayer.h */,
 				044090CD29D3D79100C5195C /* ShaperLayer.m */,
 				044090CF29D3E7FC00C5195C /* TextLayer.h */,
@@ -276,6 +288,23 @@
 				044090DF29D560B900C5195C /* EmitterLayer.m */,
 			);
 			path = "粒子动画";
+			sourceTree = "<group>";
+		};
+		044090EB29D6B5DB00C5195C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				044090EC29D6B60100C5195C /* Ship.mp4 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		044090EE29D6BC9F00C5195C /* 隐式动画 */ = {
+			isa = PBXGroup;
+			children = (
+				044090EF29D6BCF000C5195C /* TransactionViewController.h */,
+				044090F029D6BCF000C5195C /* TransactionViewController.m */,
+			);
+			path = "隐式动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +367,7 @@
 				0440907529C2DA4500C5195C /* LaunchScreen.storyboard in Resources */,
 				0440907229C2DA4500C5195C /* Assets.xcassets in Resources */,
 				0440907029C2DA4200C5195C /* Main.storyboard in Resources */,
+				044090ED29D6B60200C5195C /* Ship.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +405,8 @@
 				044090A829D1841300C5195C /* shadowPath.m in Sources */,
 				044090AB29D18DF700C5195C /* Mask.m in Sources */,
 				044090D129D3E7FC00C5195C /* TextLayer.m in Sources */,
+				044090F129D6BCF000C5195C /* TransactionViewController.m in Sources */,
+				044090EA29D6B39F00C5195C /* AVPlayerViewController.m in Sources */,
 				044090C629D2DD5500C5195C /* Solid.m in Sources */,
 				0440909329C9FFDB00C5195C /* CustomDrawRectView.m in Sources */,
 				0440909F29D12D0500C5195C /* zPosition.m in Sources */,
