@@ -43,6 +43,9 @@
 		044090EA29D6B39F00C5195C /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090E929D6B39F00C5195C /* AVPlayerViewController.m */; };
 		044090ED29D6B60200C5195C /* Ship.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 044090EC29D6B60100C5195C /* Ship.mp4 */; };
 		044090F129D6BCF000C5195C /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090F029D6BCF000C5195C /* TransactionViewController.m */; };
+		044090F829D93E3F00C5195C /* Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090F729D93E3F00C5195C /* Presentation.m */; };
+		044090FC29DA702E00C5195C /* BasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090FB29DA702E00C5195C /* BasicAnimation.m */; };
+		044090FF29DAD36000C5195C /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090FE29DAD36000C5195C /* Ship.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +118,12 @@
 		044090EC29D6B60100C5195C /* Ship.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ship.mp4; sourceTree = "<group>"; };
 		044090EF29D6BCF000C5195C /* TransactionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionViewController.h; sourceTree = "<group>"; };
 		044090F029D6BCF000C5195C /* TransactionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionViewController.m; sourceTree = "<group>"; };
+		044090F629D93E3F00C5195C /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
+		044090F729D93E3F00C5195C /* Presentation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Presentation.m; sourceTree = "<group>"; };
+		044090FA29DA702E00C5195C /* BasicAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicAnimation.h; sourceTree = "<group>"; };
+		044090FB29DA702E00C5195C /* BasicAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicAnimation.m; sourceTree = "<group>"; };
+		044090FD29DAD36000C5195C /* Ship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		044090FE29DAD36000C5195C /* Ship.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +156,8 @@
 		0440906429C2DA4200C5195C /* calayer */ = {
 			isa = PBXGroup;
 			children = (
+				044090F929DA6F5600C5195C /* CABasicAnimation */,
+				044090F229D93DB300C5195C /* 显示图层 */,
 				044090EE29D6BC9F00C5195C /* 隐式动画 */,
 				044090EB29D6B5DB00C5195C /* Resource */,
 				044090DD29D5608500C5195C /* 粒子动画 */,
@@ -307,6 +318,26 @@
 			path = "隐式动画";
 			sourceTree = "<group>";
 		};
+		044090F229D93DB300C5195C /* 显示图层 */ = {
+			isa = PBXGroup;
+			children = (
+				044090F629D93E3F00C5195C /* Presentation.h */,
+				044090F729D93E3F00C5195C /* Presentation.m */,
+			);
+			path = "显示图层";
+			sourceTree = "<group>";
+		};
+		044090F929DA6F5600C5195C /* CABasicAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				044090FA29DA702E00C5195C /* BasicAnimation.h */,
+				044090FB29DA702E00C5195C /* BasicAnimation.m */,
+				044090FD29DAD36000C5195C /* Ship.h */,
+				044090FE29DAD36000C5195C /* Ship.m */,
+			);
+			path = CABasicAnimation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,8 +414,10 @@
 				044090DA29D43DD400C5195C /* ReplicatorLayer.m in Sources */,
 				044090CE29D3D79100C5195C /* ShaperLayer.m in Sources */,
 				044090E029D560B900C5195C /* EmitterLayer.m in Sources */,
+				044090FF29DAD36000C5195C /* Ship.m in Sources */,
 				044090B729D2943300C5195C /* AffineTransform.m in Sources */,
 				0440909C29CEFDEA00C5195C /* ClockView.m in Sources */,
+				044090F829D93E3F00C5195C /* Presentation.m in Sources */,
 				0440909029C9A40C00C5195C /* CustomCircleView.m in Sources */,
 				0440908D29C9A39A00C5195C /* DrawRect.m in Sources */,
 				0440906729C2DA4200C5195C /* AppDelegate.m in Sources */,
@@ -398,6 +431,7 @@
 				044090C229D2D36800C5195C /* Outer.m in Sources */,
 				0440908329C3507B00C5195C /* CALayerViewController.m in Sources */,
 				044090B329D28BB300C5195C /* ShouldRasterize.m in Sources */,
+				044090FC29DA702E00C5195C /* BasicAnimation.m in Sources */,
 				0440906A29C2DA4200C5195C /* SceneDelegate.m in Sources */,
 				044090D429D3F18D00C5195C /* LayerLabel.m in Sources */,
 				044090A529D1710B00C5195C /* Corner.m in Sources */,
