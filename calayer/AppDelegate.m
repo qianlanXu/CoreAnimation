@@ -6,8 +6,11 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
+
+@property (nonatomic, strong) UITabBarController *tabViewController;
 
 @end
 
@@ -17,14 +20,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    UIViewController *oneViewController = [[UIViewController alloc] init];
+    UIViewController *oneViewController = [[ViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:oneViewController];
-    self.window.rootViewController = navigationController;
+    
+    
+    UIViewController *secondViewController = [[ViewController alloc] init];
+    _tabViewController = [[UITabBarController alloc] init];
+    _tabViewController.viewControllers = @[navigationController, secondViewController];
+    _tabViewController.delegate = self;
+    
+    self.window.rootViewController = _tabViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
 
+#pragma mark - UITabBarControllerDelegate
 
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    CATransition *transition = CATransition.animation;
+    transition.type = kCATransitionFromBottom;
+    [_tabViewController.view.layer addAnimation:transition forKey:nil];
+}
 #pragma mark - UISceneSession lifecycle
 
 

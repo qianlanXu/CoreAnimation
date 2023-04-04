@@ -33,6 +33,8 @@
 #import "BasicAnimation.h"
 #import "Ship.h"
 #import "AnimationGroup.h"
+#import "Transition.h"
+#import "CustomTransition.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -58,7 +60,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", @"Transform3D", @"Outer", @"Solid", @"ShaperLayer", @"TextLayer", @"CubeViewController", @"ReplicatorLayer", @"EmitterLayer", @"AVPlayer", @"Transaction", @"Presentation", @"BasicAnimation", @"Ship", @"AnimationGroup", nil];
+    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", @"Transform3D", @"Outer", @"Solid", @"ShaperLayer", @"TextLayer", @"CubeViewController", @"ReplicatorLayer", @"EmitterLayer", @"AVPlayer", @"Transaction", @"Presentation", @"BasicAnimation", @"Ship", @"AnimationGroup", @"Transition", @"CustomTransition", nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -160,6 +162,12 @@
         [self.navigationController pushViewController:viewController animated:YES];
     } else if (indexPath.row == 26) {
         AnimationGroup *viewController = [[AnimationGroup alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 27) {
+        Transition *viewController = [[Transition alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 28) {
+        CustomTransition *viewController = [[CustomTransition alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }

@@ -8,7 +8,9 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 
-@interface SceneDelegate ()
+@interface SceneDelegate () <UITabBarControllerDelegate>
+
+@property (nonatomic, strong) UITabBarController *tabViewController;
 
 @end
 
@@ -21,11 +23,31 @@
         
     ViewController *mainVC = [[ViewController alloc]init];
     UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    navigationVC.tabBarItem.title = @"吧唧";
+    navigationVC.tabBarItem.image = [UIImage imageNamed:@"Ship"];
+    navigationVC.tabBarItem.imageInsets = UIEdgeInsetsMake(6.0, 0.0, -6.0,0.0);
+    [navigationVC.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, 15)];
     
-    self.window.rootViewController = navigationVC;
+    UIViewController *secondViewController = [[ViewController alloc] init];
+    secondViewController.tabBarItem.title = @"猫咪";
+    secondViewController.tabBarItem.image = [UIImage imageNamed:@"Ship"];
+
+    _tabViewController = [[UITabBarController alloc] init];
+    _tabViewController.viewControllers = @[navigationVC, secondViewController];
+    _tabViewController.delegate = self;
+    
+    
+    self.window.rootViewController = _tabViewController;
     [self.window makeKeyAndVisible];
 }
 
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    CATransition *transition = CATransition.animation;
+    transition.type = kCATransitionFromBottom;
+    transition.subtype = kCATransitionPush;
+    transition.duration = 5.0;
+    [_tabViewController.view.layer addAnimation:transition forKey:nil];
+}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.

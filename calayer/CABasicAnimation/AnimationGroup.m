@@ -42,6 +42,7 @@
     animation.rotationMode = kCAAnimationRotateAuto;
     
     CABasicAnimation *animation1 = CABasicAnimation.animation;
+    // 属性动画
     animation1.keyPath = @"backgroundColor";
     animation1.toValue = (__bridge id)UIColor.redColor.CGColor;
     

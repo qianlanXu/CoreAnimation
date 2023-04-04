@@ -47,6 +47,8 @@
 		044090FC29DA702E00C5195C /* BasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090FB29DA702E00C5195C /* BasicAnimation.m */; };
 		044090FF29DAD36000C5195C /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090FE29DAD36000C5195C /* Ship.m */; };
 		0440910229DBB5DC00C5195C /* AnimationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910129DBB5DC00C5195C /* AnimationGroup.m */; };
+		0440910529DBC0B700C5195C /* Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910429DBC0B700C5195C /* Transition.m */; };
+		0440910929DBD7FE00C5195C /* CustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910829DBD7FE00C5195C /* CustomTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +129,10 @@
 		044090FE29DAD36000C5195C /* Ship.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
 		0440910029DBB5DC00C5195C /* AnimationGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationGroup.h; sourceTree = "<group>"; };
 		0440910129DBB5DC00C5195C /* AnimationGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationGroup.m; sourceTree = "<group>"; };
+		0440910329DBC0B700C5195C /* Transition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transition.h; sourceTree = "<group>"; };
+		0440910429DBC0B700C5195C /* Transition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transition.m; sourceTree = "<group>"; };
+		0440910729DBD7FD00C5195C /* CustomTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTransition.h; sourceTree = "<group>"; };
+		0440910829DBD7FE00C5195C /* CustomTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,7 @@
 		0440906429C2DA4200C5195C /* calayer */ = {
 			isa = PBXGroup;
 			children = (
+				0440910629DBD7D900C5195C /* 过渡动画 */,
 				044090F929DA6F5600C5195C /* CABasicAnimation */,
 				044090F229D93DB300C5195C /* 显示图层 */,
 				044090EE29D6BC9F00C5195C /* 隐式动画 */,
@@ -339,8 +346,19 @@
 				044090FE29DAD36000C5195C /* Ship.m */,
 				0440910029DBB5DC00C5195C /* AnimationGroup.h */,
 				0440910129DBB5DC00C5195C /* AnimationGroup.m */,
+				0440910329DBC0B700C5195C /* Transition.h */,
+				0440910429DBC0B700C5195C /* Transition.m */,
 			);
 			path = CABasicAnimation;
+			sourceTree = "<group>";
+		};
+		0440910629DBD7D900C5195C /* 过渡动画 */ = {
+			isa = PBXGroup;
+			children = (
+				0440910729DBD7FD00C5195C /* CustomTransition.h */,
+				0440910829DBD7FE00C5195C /* CustomTransition.m */,
+			);
+			path = "过渡动画";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,9 +447,11 @@
 				0440908629C851C400C5195C /* ResizableImageWithCapInsets.m in Sources */,
 				044090D729D41F6E00C5195C /* CubeViewController.m in Sources */,
 				0440908A29C85E9200C5195C /* BezierPath.m in Sources */,
+				0440910529DBC0B700C5195C /* Transition.m in Sources */,
 				0440909929CEFCCB00C5195C /* Clock.m in Sources */,
 				0440907829C2DA4500C5195C /* main.m in Sources */,
 				044090A229D134DA00C5195C /* HitTestViewController.m in Sources */,
+				0440910929DBD7FE00C5195C /* CustomTransition.m in Sources */,
 				044090AF29D27B3E00C5195C /* LCDClock.m in Sources */,
 				044090C229D2D36800C5195C /* Outer.m in Sources */,
 				0440908329C3507B00C5195C /* CALayerViewController.m in Sources */,
