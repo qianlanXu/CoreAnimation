@@ -46,6 +46,7 @@
 		044090F829D93E3F00C5195C /* Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090F729D93E3F00C5195C /* Presentation.m */; };
 		044090FC29DA702E00C5195C /* BasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090FB29DA702E00C5195C /* BasicAnimation.m */; };
 		044090FF29DAD36000C5195C /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 044090FE29DAD36000C5195C /* Ship.m */; };
+		0440910229DBB5DC00C5195C /* AnimationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910129DBB5DC00C5195C /* AnimationGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,8 @@
 		044090FB29DA702E00C5195C /* BasicAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicAnimation.m; sourceTree = "<group>"; };
 		044090FD29DAD36000C5195C /* Ship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
 		044090FE29DAD36000C5195C /* Ship.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
+		0440910029DBB5DC00C5195C /* AnimationGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationGroup.h; sourceTree = "<group>"; };
+		0440910129DBB5DC00C5195C /* AnimationGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +337,8 @@
 				044090FB29DA702E00C5195C /* BasicAnimation.m */,
 				044090FD29DAD36000C5195C /* Ship.h */,
 				044090FE29DAD36000C5195C /* Ship.m */,
+				0440910029DBB5DC00C5195C /* AnimationGroup.h */,
+				0440910129DBB5DC00C5195C /* AnimationGroup.m */,
 			);
 			path = CABasicAnimation;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				044090D129D3E7FC00C5195C /* TextLayer.m in Sources */,
 				044090F129D6BCF000C5195C /* TransactionViewController.m in Sources */,
 				044090EA29D6B39F00C5195C /* AVPlayerViewController.m in Sources */,
+				0440910229DBB5DC00C5195C /* AnimationGroup.m in Sources */,
 				044090C629D2DD5500C5195C /* Solid.m in Sources */,
 				0440909329C9FFDB00C5195C /* CustomDrawRectView.m in Sources */,
 				0440909F29D12D0500C5195C /* zPosition.m in Sources */,

@@ -32,6 +32,7 @@
 #import "Presentation.h"
 #import "BasicAnimation.h"
 #import "Ship.h"
+#import "AnimationGroup.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -57,7 +58,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", @"Transform3D", @"Outer", @"Solid", @"ShaperLayer", @"TextLayer", @"CubeViewController", @"ReplicatorLayer", @"EmitterLayer", @"AVPlayer", @"Transaction", @"Presentation", @"BasicAnimation", @"Ship", nil];
+    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", @"Transform3D", @"Outer", @"Solid", @"ShaperLayer", @"TextLayer", @"CubeViewController", @"ReplicatorLayer", @"EmitterLayer", @"AVPlayer", @"Transaction", @"Presentation", @"BasicAnimation", @"Ship", @"AnimationGroup", nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -156,6 +157,9 @@
         [self.navigationController pushViewController:viewController animated:YES];
     } else if (indexPath.row == 25) {
         Ship *viewController = [[Ship alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 26) {
+        AnimationGroup *viewController = [[AnimationGroup alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
