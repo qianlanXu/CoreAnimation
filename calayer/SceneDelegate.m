@@ -18,8 +18,9 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    UIWindowScene *windowScene = [[UIWindowScene alloc] initWithSession:session connectionOptions:connectionOptions];
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc]initWithWindowScene:windowScene];
+    self.window.frame = windowScene.coordinateSpace.bounds;
         
     ViewController *mainVC = [[ViewController alloc]init];
     UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:mainVC];

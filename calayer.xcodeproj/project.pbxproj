@@ -49,6 +49,8 @@
 		0440910229DBB5DC00C5195C /* AnimationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910129DBB5DC00C5195C /* AnimationGroup.m */; };
 		0440910529DBC0B700C5195C /* Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910429DBC0B700C5195C /* Transition.m */; };
 		0440910929DBD7FE00C5195C /* CustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910829DBD7FE00C5195C /* CustomTransition.m */; };
+		0440910C29DEC31700C5195C /* MediaTiming.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910B29DEC31700C5195C /* MediaTiming.m */; };
+		04BE2F1329DFBE6F00F7450B /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1229DFBE6F00F7450B /* Door.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +135,10 @@
 		0440910429DBC0B700C5195C /* Transition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transition.m; sourceTree = "<group>"; };
 		0440910729DBD7FD00C5195C /* CustomTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTransition.h; sourceTree = "<group>"; };
 		0440910829DBD7FE00C5195C /* CustomTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTransition.m; sourceTree = "<group>"; };
+		0440910A29DEC31700C5195C /* MediaTiming.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaTiming.h; sourceTree = "<group>"; };
+		0440910B29DEC31700C5195C /* MediaTiming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaTiming.m; sourceTree = "<group>"; };
+		04BE2F1129DFBE6F00F7450B /* Door.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
+		04BE2F1229DFBE6F00F7450B /* Door.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +354,10 @@
 				0440910129DBB5DC00C5195C /* AnimationGroup.m */,
 				0440910329DBC0B700C5195C /* Transition.h */,
 				0440910429DBC0B700C5195C /* Transition.m */,
+				0440910A29DEC31700C5195C /* MediaTiming.h */,
+				0440910B29DEC31700C5195C /* MediaTiming.m */,
+				04BE2F1129DFBE6F00F7450B /* Door.h */,
+				04BE2F1229DFBE6F00F7450B /* Door.m */,
 			);
 			path = CABasicAnimation;
 			sourceTree = "<group>";
@@ -437,6 +447,7 @@
 				044090DA29D43DD400C5195C /* ReplicatorLayer.m in Sources */,
 				044090CE29D3D79100C5195C /* ShaperLayer.m in Sources */,
 				044090E029D560B900C5195C /* EmitterLayer.m in Sources */,
+				04BE2F1329DFBE6F00F7450B /* Door.m in Sources */,
 				044090FF29DAD36000C5195C /* Ship.m in Sources */,
 				044090B729D2943300C5195C /* AffineTransform.m in Sources */,
 				0440909C29CEFDEA00C5195C /* ClockView.m in Sources */,
@@ -467,6 +478,7 @@
 				044090F129D6BCF000C5195C /* TransactionViewController.m in Sources */,
 				044090EA29D6B39F00C5195C /* AVPlayerViewController.m in Sources */,
 				0440910229DBB5DC00C5195C /* AnimationGroup.m in Sources */,
+				0440910C29DEC31700C5195C /* MediaTiming.m in Sources */,
 				044090C629D2DD5500C5195C /* Solid.m in Sources */,
 				0440909329C9FFDB00C5195C /* CustomDrawRectView.m in Sources */,
 				0440909F29D12D0500C5195C /* zPosition.m in Sources */,
@@ -610,6 +622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X94Z28FLGK;
@@ -626,8 +639,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cxvxvcv.calayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heyooh.funchatapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -638,6 +652,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X94Z28FLGK;
@@ -654,8 +669,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cxvxvcv.calayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heyooh.funchatapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
