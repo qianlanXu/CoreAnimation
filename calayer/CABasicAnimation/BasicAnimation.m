@@ -70,6 +70,8 @@
     (__bridge id)UIColor.yellowColor.CGColor,
     (__bridge id)UIColor.greenColor.CGColor,
     (__bridge id)UIColor.blueColor.CGColor];
+    CAMediaTimingFunction *fn = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    animation.timingFunctions = @[fn, fn, fn, fn];
     [_colorLayer addAnimation:animation forKey:nil];
 }
 

@@ -51,6 +51,7 @@
 		0440910929DBD7FE00C5195C /* CustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910829DBD7FE00C5195C /* CustomTransition.m */; };
 		0440910C29DEC31700C5195C /* MediaTiming.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910B29DEC31700C5195C /* MediaTiming.m */; };
 		04BE2F1329DFBE6F00F7450B /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1229DFBE6F00F7450B /* Door.m */; };
+		04BE2F1629E4039800F7450B /* AnimationTimingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1529E4039800F7450B /* AnimationTimingFunction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,8 @@
 		0440910B29DEC31700C5195C /* MediaTiming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaTiming.m; sourceTree = "<group>"; };
 		04BE2F1129DFBE6F00F7450B /* Door.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
 		04BE2F1229DFBE6F00F7450B /* Door.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
+		04BE2F1429E4039800F7450B /* AnimationTimingFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationTimingFunction.h; sourceTree = "<group>"; };
+		04BE2F1529E4039800F7450B /* AnimationTimingFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationTimingFunction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +361,8 @@
 				0440910B29DEC31700C5195C /* MediaTiming.m */,
 				04BE2F1129DFBE6F00F7450B /* Door.h */,
 				04BE2F1229DFBE6F00F7450B /* Door.m */,
+				04BE2F1429E4039800F7450B /* AnimationTimingFunction.h */,
+				04BE2F1529E4039800F7450B /* AnimationTimingFunction.m */,
 			);
 			path = CABasicAnimation;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				0440907829C2DA4500C5195C /* main.m in Sources */,
 				044090A229D134DA00C5195C /* HitTestViewController.m in Sources */,
 				0440910929DBD7FE00C5195C /* CustomTransition.m in Sources */,
+				04BE2F1629E4039800F7450B /* AnimationTimingFunction.m in Sources */,
 				044090AF29D27B3E00C5195C /* LCDClock.m in Sources */,
 				044090C229D2D36800C5195C /* Outer.m in Sources */,
 				0440908329C3507B00C5195C /* CALayerViewController.m in Sources */,

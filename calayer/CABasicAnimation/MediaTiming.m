@@ -7,7 +7,7 @@
 
 #import "MediaTiming.h"
 
-@interface MediaTiming () <CAAnimationDelegate>
+@interface MediaTiming () <CAAnimationDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) UIView *containerView;
 
@@ -59,8 +59,10 @@
     
     _durationField = [[UITextField alloc] initWithFrame:CGRectMake(50, 400, 50, 50)];
     _durationField.borderStyle = UITextBorderStyleRoundedRect;
-    _durationField.keyboardType = UIKeyboardTypeASCIICapableNumberPad;
-    _durationField.text = @"0";
+    _durationField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    _durationField.placeholder = @"0";
+    _durationField.delegate = self;
+    _durationField.returnKeyType = UIReturnKeyDone;
     [_containerView addSubview:_durationField];
     
     _repeatLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 350, 100, 50)];
@@ -69,8 +71,10 @@
     
     _repeatField = [[UITextField alloc] initWithFrame:CGRectMake(200, 400, 50, 50)];
     _repeatField.borderStyle = UITextBorderStyleRoundedRect;
-    _repeatField.keyboardType = UIKeyboardTypeASCIICapableNumberPad;
-    _repeatField.text = @"0";
+    _repeatField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    _repeatField.returnKeyType = UIReturnKeyDone;
+    _repeatField.placeholder = @"0";
+    _repeatField.delegate = self;
     [_containerView addSubview:_repeatField];
     
     _startButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -191,5 +195,11 @@
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     [self setControlsEnabled:YES];
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self hideKeyboard];
+    return YES;
 }
 @end

@@ -18,19 +18,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    UIViewController *oneViewController = [[ViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:oneViewController];
-    
-    
-    UIViewController *secondViewController = [[ViewController alloc] init];
-    _tabViewController = [[UITabBarController alloc] init];
-    _tabViewController.viewControllers = @[navigationController, secondViewController];
-    _tabViewController.delegate = self;
-    
-    self.window.rootViewController = _tabViewController;
-    [self.window makeKeyAndVisible];
+    if(@available(iOS 13, *)) {
+        
+    }else{
+        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        self.window.backgroundColor = [UIColor whiteColor];
+        UIViewController *oneViewController = [[ViewController alloc] init];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:oneViewController];
+        
+        
+        UIViewController *secondViewController = [[ViewController alloc] init];
+        _tabViewController = [[UITabBarController alloc] init];
+        _tabViewController.viewControllers = @[navigationController, secondViewController];
+        _tabViewController.delegate = self;
+        
+        self.window.rootViewController = _tabViewController;
+        [self.window makeKeyAndVisible];
+    }
     return YES;
 }
 
