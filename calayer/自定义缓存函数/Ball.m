@@ -17,11 +17,13 @@
 
 @property (nonatomic, assign) NSTimeInterval timeOffset;
 
+@property (nonatomic, assign) NSTimeInterval lastStep;
+
 @property (nonatomic, strong) id fromValue;
 
 @property (nonatomic, strong) id toValue;
 
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) CADisplayLink *timer;
 
 @end
 
@@ -54,50 +56,20 @@
     _timeOffset = 0.0;
     _fromValue = [NSValue valueWithCGPoint:CGPointMake(150, 32)];
     _toValue = [NSValue valueWithCGPoint:CGPointMake(150, 268)];
+    _lastStep = CACurrentMediaTime();
     // stop the timer if it's already running
     [self.timer invalidate];
     // start the timer
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1/60.0 target:self selector:@selector(step:) userInfo:nil repeats:YES];
-//    CFTimeInterval duration = 1.0;
-//    NSInteger numFrames = duration * 60;
-//    NSMutableArray *frames = NSMutableArray.array;
-//    for (int i = 0; i < numFrames; i++) {
-//        CGFloat time = 1 /  (CGFloat)numFrames * i ;
-//        time = bounceEaseOut(time);
-//        [frames addObject:[self interpolateFromValue:_fromValue toValue:_toValue time:time]];
-//    }
-//    CAKeyframeAnimation *animation = CAKeyframeAnimation.animation;
-//    animation.keyPath = @"position";
-//    animation.duration = self.duration;
-//    animation.delegate = self;
-//    animation.values = frames;
-//    animation.values = @[
-//        [NSValue valueWithCGPoint:CGPointMake(150, 32)],
-//        [NSValue valueWithCGPoint:CGPointMake(150, 268)],
-//        [NSValue valueWithCGPoint:CGPointMake(150, 140)],
-//        [NSValue valueWithCGPoint:CGPointMake(150, 268)],
-//        [NSValue valueWithCGPoint:CGPointMake(150, 220)],
-//        [NSValue valueWithCGPoint:CGPointMake(150, 268)],
-//        [NSValue valueWithCGPoint:CGPointMake(150, 250)],
-//        [NSValue valueWithCGPoint:CGPointMake(150, 268)]
-//    ];
-//    animation.timingFunctions = @[
-//        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-//        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-//        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-//        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-//        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-//        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-//        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
-//        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]
-//    ];
-//    animation.keyTimes = @[@0.0, @0.3, @0.5, @0.7, @0.8, @0.9, @0.95, @1.0];
-//    [_ballView.layer addAnimation:animation forKey:nil];
-//    _ballView.layer.position = CGPointMake(150, 268);
+    _timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(step:)];
+    [_timer addToRunLoop:NSRunLoop.mainRunLoop forMode:NSDefaultRunLoopMode];
+    [_timer addToRunLoop:NSRunLoop.mainRunLoop forMode:UITrackingRunLoopMode];
 }
 
 - (void)step:(NSTimer *)step {
-    _timeOffset = MIN(_timeOffset + 1/60.0, _duration);
+    CFTimeInterval thisStep = CACurrentMediaTime();
+    CFTimeInterval stepDuration = thisStep - _lastStep;
+    _lastStep = thisStep;
+    _timeOffset = MIN(_timeOffset + stepDuration, _duration);
     CGFloat time = _timeOffset / _duration;
     time = bounceEaseOut(time);
     id position = [self interpolateFromValue:_fromValue toValue:_toValue time:time];
