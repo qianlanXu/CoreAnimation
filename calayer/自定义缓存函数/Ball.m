@@ -13,6 +13,16 @@
 
 @property (nonatomic, strong) UIImageView *ballView;
 
+@property (nonatomic, assign) NSTimeInterval duration;
+
+@property (nonatomic, assign) NSTimeInterval timeOffset;
+
+@property (nonatomic, strong) id fromValue;
+
+@property (nonatomic, strong) id toValue;
+
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation Ball
@@ -33,23 +43,34 @@
     [_containerView addSubview:_ballView];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self animate];
+}
+
 - (void)animate {
     _ballView.center = CGPointMake(150, 32);
-    NSValue *fromValue = [NSValue valueWithCGPoint:CGPointMake(150, 32)];
-    NSValue *toValue = [NSValue valueWithCGPoint:CGPointMake(150, 268)];
-    CFTimeInterval duration = 1.0;
-    NSInteger numFrames = duration * 60;
-    NSMutableArray *frames = NSMutableArray.array;
-    for (int i = 0; i < numFrames; i++) {
-        CGFloat time = 1 /  (CGFloat)numFrames * i ;
-        time = bounceEaseOut(time);
-        [frames addObject:[self interpolateFromValue:fromValue toValue:toValue time:time]];
-    }
-    CAKeyframeAnimation *animation = CAKeyframeAnimation.animation;
-    animation.keyPath = @"position";
-    animation.duration = 1.0;
-    animation.delegate = self;
-    animation.values = frames;
+    _duration = 1.0;
+    _timeOffset = 0.0;
+    _fromValue = [NSValue valueWithCGPoint:CGPointMake(150, 32)];
+    _toValue = [NSValue valueWithCGPoint:CGPointMake(150, 268)];
+    // stop the timer if it's already running
+    [self.timer invalidate];
+    // start the timer
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1/60.0 target:self selector:@selector(step:) userInfo:nil repeats:YES];
+//    CFTimeInterval duration = 1.0;
+//    NSInteger numFrames = duration * 60;
+//    NSMutableArray *frames = NSMutableArray.array;
+//    for (int i = 0; i < numFrames; i++) {
+//        CGFloat time = 1 /  (CGFloat)numFrames * i ;
+//        time = bounceEaseOut(time);
+//        [frames addObject:[self interpolateFromValue:_fromValue toValue:_toValue time:time]];
+//    }
+//    CAKeyframeAnimation *animation = CAKeyframeAnimation.animation;
+//    animation.keyPath = @"position";
+//    animation.duration = self.duration;
+//    animation.delegate = self;
+//    animation.values = frames;
 //    animation.values = @[
 //        [NSValue valueWithCGPoint:CGPointMake(150, 32)],
 //        [NSValue valueWithCGPoint:CGPointMake(150, 268)],
@@ -71,10 +92,23 @@
 //        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]
 //    ];
 //    animation.keyTimes = @[@0.0, @0.3, @0.5, @0.7, @0.8, @0.9, @0.95, @1.0];
-    [_ballView.layer addAnimation:animation forKey:nil];
-    _ballView.layer.position = CGPointMake(150, 268);
+//    [_ballView.layer addAnimation:animation forKey:nil];
+//    _ballView.layer.position = CGPointMake(150, 268);
 }
 
+- (void)step:(NSTimer *)step {
+    _timeOffset = MIN(_timeOffset + 1/60.0, _duration);
+    CGFloat time = _timeOffset / _duration;
+    time = bounceEaseOut(time);
+    id position = [self interpolateFromValue:_fromValue toValue:_toValue time:time];
+    _ballView.center = [position CGPointValue];
+    // 到时间停止计时器
+    if (_timeOffset >= _duration) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+    
+}
 - (CGFloat)interpolate:(CGFloat)from to:(CGFloat)to time:(CGFloat)time {
     return (to - from) * time + from;
 }
