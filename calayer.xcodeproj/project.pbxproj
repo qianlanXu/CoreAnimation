@@ -52,6 +52,8 @@
 		0440910C29DEC31700C5195C /* MediaTiming.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440910B29DEC31700C5195C /* MediaTiming.m */; };
 		04BE2F1329DFBE6F00F7450B /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1229DFBE6F00F7450B /* Door.m */; };
 		04BE2F1629E4039800F7450B /* AnimationTimingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1529E4039800F7450B /* AnimationTimingFunction.m */; };
+		04BE2F1A29E5019100F7450B /* CustomEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1929E5019100F7450B /* CustomEasingFunction.m */; };
+		04BE2F1D29E55AFC00F7450B /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1C29E55AFC00F7450B /* Ball.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +144,10 @@
 		04BE2F1229DFBE6F00F7450B /* Door.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
 		04BE2F1429E4039800F7450B /* AnimationTimingFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationTimingFunction.h; sourceTree = "<group>"; };
 		04BE2F1529E4039800F7450B /* AnimationTimingFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationTimingFunction.m; sourceTree = "<group>"; };
+		04BE2F1829E5019100F7450B /* CustomEasingFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomEasingFunction.h; sourceTree = "<group>"; };
+		04BE2F1929E5019100F7450B /* CustomEasingFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomEasingFunction.m; sourceTree = "<group>"; };
+		04BE2F1B29E55AFC00F7450B /* Ball.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		04BE2F1C29E55AFC00F7450B /* Ball.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,7 @@
 		0440906429C2DA4200C5195C /* calayer */ = {
 			isa = PBXGroup;
 			children = (
+				04BE2F1729E5015200F7450B /* 自定义缓存函数 */,
 				0440910629DBD7D900C5195C /* 过渡动画 */,
 				044090F929DA6F5600C5195C /* CABasicAnimation */,
 				044090F229D93DB300C5195C /* 显示图层 */,
@@ -376,6 +383,17 @@
 			path = "过渡动画";
 			sourceTree = "<group>";
 		};
+		04BE2F1729E5015200F7450B /* 自定义缓存函数 */ = {
+			isa = PBXGroup;
+			children = (
+				04BE2F1829E5019100F7450B /* CustomEasingFunction.h */,
+				04BE2F1929E5019100F7450B /* CustomEasingFunction.m */,
+				04BE2F1B29E55AFC00F7450B /* Ball.h */,
+				04BE2F1C29E55AFC00F7450B /* Ball.m */,
+			);
+			path = "自定义缓存函数";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -449,6 +467,7 @@
 			files = (
 				0440906D29C2DA4200C5195C /* ViewController.m in Sources */,
 				044090BF29D2C45900C5195C /* Transform3D.m in Sources */,
+				04BE2F1D29E55AFC00F7450B /* Ball.m in Sources */,
 				044090DA29D43DD400C5195C /* ReplicatorLayer.m in Sources */,
 				044090CE29D3D79100C5195C /* ShaperLayer.m in Sources */,
 				044090E029D560B900C5195C /* EmitterLayer.m in Sources */,
@@ -482,6 +501,7 @@
 				044090AB29D18DF700C5195C /* Mask.m in Sources */,
 				044090D129D3E7FC00C5195C /* TextLayer.m in Sources */,
 				044090F129D6BCF000C5195C /* TransactionViewController.m in Sources */,
+				04BE2F1A29E5019100F7450B /* CustomEasingFunction.m in Sources */,
 				044090EA29D6B39F00C5195C /* AVPlayerViewController.m in Sources */,
 				0440910229DBB5DC00C5195C /* AnimationGroup.m in Sources */,
 				0440910C29DEC31700C5195C /* MediaTiming.m in Sources */,

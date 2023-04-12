@@ -104,6 +104,7 @@
         animation.duration = 0.5;
         animation.delegate = self;
         [animation setValue:handView forKey:@"handView"]; // 给操作的view加标签
+        animation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:1 :0 :0.75 :1];
         [handView.layer addAnimation:animation forKey:nil];
     } else {
         handView.layer.transform = transform;
