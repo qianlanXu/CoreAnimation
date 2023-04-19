@@ -54,6 +54,8 @@
 		04BE2F1629E4039800F7450B /* AnimationTimingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1529E4039800F7450B /* AnimationTimingFunction.m */; };
 		04BE2F1A29E5019100F7450B /* CustomEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1929E5019100F7450B /* CustomEasingFunction.m */; };
 		04BE2F1D29E55AFC00F7450B /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1C29E55AFC00F7450B /* Ball.m */; };
+		04BE2F2129EE34E200F7450B /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F2029EE34E200F7450B /* DrawView.m */; };
+		04BE2F2429EE399900F7450B /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F2329EE399900F7450B /* DrawViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +150,10 @@
 		04BE2F1929E5019100F7450B /* CustomEasingFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomEasingFunction.m; sourceTree = "<group>"; };
 		04BE2F1B29E55AFC00F7450B /* Ball.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
 		04BE2F1C29E55AFC00F7450B /* Ball.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		04BE2F1F29EE34E200F7450B /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		04BE2F2029EE34E200F7450B /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		04BE2F2229EE399900F7450B /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
+		04BE2F2329EE399900F7450B /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 		0440906429C2DA4200C5195C /* calayer */ = {
 			isa = PBXGroup;
 			children = (
+				04BE2F1E29EE34BD00F7450B /* 矢量图 */,
 				04BE2F1729E5015200F7450B /* 自定义缓存函数 */,
 				0440910629DBD7D900C5195C /* 过渡动画 */,
 				044090F929DA6F5600C5195C /* CABasicAnimation */,
@@ -394,6 +401,17 @@
 			path = "自定义缓存函数";
 			sourceTree = "<group>";
 		};
+		04BE2F1E29EE34BD00F7450B /* 矢量图 */ = {
+			isa = PBXGroup;
+			children = (
+				04BE2F1F29EE34E200F7450B /* DrawView.h */,
+				04BE2F2029EE34E200F7450B /* DrawView.m */,
+				04BE2F2229EE399900F7450B /* DrawViewController.h */,
+				04BE2F2329EE399900F7450B /* DrawViewController.m */,
+			);
+			path = "矢量图";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -491,6 +509,7 @@
 				044090AF29D27B3E00C5195C /* LCDClock.m in Sources */,
 				044090C229D2D36800C5195C /* Outer.m in Sources */,
 				0440908329C3507B00C5195C /* CALayerViewController.m in Sources */,
+				04BE2F2129EE34E200F7450B /* DrawView.m in Sources */,
 				044090B329D28BB300C5195C /* ShouldRasterize.m in Sources */,
 				044090FC29DA702E00C5195C /* BasicAnimation.m in Sources */,
 				0440906A29C2DA4200C5195C /* SceneDelegate.m in Sources */,
@@ -500,6 +519,7 @@
 				044090A829D1841300C5195C /* shadowPath.m in Sources */,
 				044090AB29D18DF700C5195C /* Mask.m in Sources */,
 				044090D129D3E7FC00C5195C /* TextLayer.m in Sources */,
+				04BE2F2429EE399900F7450B /* DrawViewController.m in Sources */,
 				044090F129D6BCF000C5195C /* TransactionViewController.m in Sources */,
 				04BE2F1A29E5019100F7450B /* CustomEasingFunction.m in Sources */,
 				044090EA29D6B39F00C5195C /* AVPlayerViewController.m in Sources */,
