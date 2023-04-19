@@ -15,12 +15,22 @@
 
 @implementation DrawView
 
+// 避免重写drawRect,使用有硬件支持的CAShapeLayer
+
++ (Class)layerClass {
+    return CAShapeLayer.class;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         _path = UIBezierPath.bezierPath;
-        _path.lineJoinStyle = kCGLineJoinRound;
-        _path.lineCapStyle = kCGLineCapRound;
-        _path.lineWidth = 5.0;
+        
+        CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
+        shapeLayer.strokeColor = UIColor.redColor.CGColor;
+        shapeLayer.fillColor = UIColor.clearColor.CGColor;
+        shapeLayer.lineJoin = kCALineJoinRound;
+        shapeLayer.lineCap = kCALineCapRound;
+        shapeLayer.lineWidth = 5.0;
     }
     return self;
 }
@@ -33,15 +43,8 @@
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     CGPoint point = [touches.anyObject locationInView:self];
     [_path addLineToPoint:point];
-    [self setNeedsDisplay];
+    ((CAShapeLayer *)self.layer).path = _path.CGPath;
 }
 
-- (void)drawRect:(CGRect)rect {
-    // 填充画布颜色
-    // 只在drawRect生效,获取当前的context,在当前context生效 相当于
-    [UIColor.clearColor setFill];
-    [UIColor.redColor setStroke];
-    // on the current graphics context
-    [_path stroke];
-}
+
 @end
