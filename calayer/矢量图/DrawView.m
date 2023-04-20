@@ -7,44 +7,44 @@
 
 #import "DrawView.h"
 
+#define BRUSH_SIZE 32
+
 @interface DrawView ()
 
-@property (nonatomic, strong) UIBezierPath *path;
+@property (nonatomic, strong) NSMutableArray *strokes;
 
 @end
 
 @implementation DrawView
 
-// 避免重写drawRect,使用有硬件支持的CAShapeLayer
-
-+ (Class)layerClass {
-    return CAShapeLayer.class;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        _path = UIBezierPath.bezierPath;
-        
-        CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
-        shapeLayer.strokeColor = UIColor.redColor.CGColor;
-        shapeLayer.fillColor = UIColor.clearColor.CGColor;
-        shapeLayer.lineJoin = kCALineJoinRound;
-        shapeLayer.lineCap = kCALineCapRound;
-        shapeLayer.lineWidth = 5.0;
+        _strokes = [NSMutableArray array];
     }
     return self;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     CGPoint point = [touches.anyObject locationInView:self];
-    [_path moveToPoint:point];
+    [self addBrushStrokeAtPoint:point];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     CGPoint point = [touches.anyObject locationInView:self];
-    [_path addLineToPoint:point];
-    ((CAShapeLayer *)self.layer).path = _path.CGPath;
+    [self addBrushStrokeAtPoint:point];
 }
 
+- (void)addBrushStrokeAtPoint:(CGPoint)point {
+    [self.strokes addObject:[NSValue valueWithCGPoint:point]];
+    [self setNeedsDisplay];
+}
 
+- (void)drawRect:(CGRect)rect {
+    for (NSValue *value in _strokes) {
+        CGPoint point = value.CGPointValue;
+        
+        CGRect brushRect = CGRectMake(point.x - BRUSH_SIZE * 0.5, point.y - BRUSH_SIZE * 0.5, BRUSH_SIZE, BRUSH_SIZE);
+        [[UIImage imageNamed:@"Chalk"] drawInRect:brushRect];
+    }
+}
 @end
