@@ -56,6 +56,9 @@
 		04BE2F1D29E55AFC00F7450B /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F1C29E55AFC00F7450B /* Ball.m */; };
 		04BE2F2129EE34E200F7450B /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F2029EE34E200F7450B /* DrawView.m */; };
 		04BE2F2429EE399900F7450B /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F2329EE399900F7450B /* DrawViewController.m */; };
+		04BE2F2829F68A3800F7450B /* PhotoLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F2729F68A3800F7450B /* PhotoLoad.m */; };
+		04BE2F2B29F6966300F7450B /* PhotoLoadCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE2F2A29F6966300F7450B /* PhotoLoadCollectionViewCell.m */; };
+		04BE2F462A035A5E00F7450B /* Vacation Photos in Resources */ = {isa = PBXBuildFile; fileRef = 04BE2F452A035A5E00F7450B /* Vacation Photos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +157,11 @@
 		04BE2F2029EE34E200F7450B /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		04BE2F2229EE399900F7450B /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		04BE2F2329EE399900F7450B /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		04BE2F2629F68A3800F7450B /* PhotoLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoLoad.h; sourceTree = "<group>"; };
+		04BE2F2729F68A3800F7450B /* PhotoLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoLoad.m; sourceTree = "<group>"; };
+		04BE2F2929F6966300F7450B /* PhotoLoadCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoLoadCollectionViewCell.h; sourceTree = "<group>"; };
+		04BE2F2A29F6966300F7450B /* PhotoLoadCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoLoadCollectionViewCell.m; sourceTree = "<group>"; };
+		04BE2F452A035A5E00F7450B /* Vacation Photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Vacation Photos"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,7 @@
 		0440906429C2DA4200C5195C /* calayer */ = {
 			isa = PBXGroup;
 			children = (
+				04BE2F2529F689F400F7450B /* 加载图片 */,
 				04BE2F1E29EE34BD00F7450B /* 矢量图 */,
 				04BE2F1729E5015200F7450B /* 自定义缓存函数 */,
 				0440910629DBD7D900C5195C /* 过渡动画 */,
@@ -412,6 +421,18 @@
 			path = "矢量图";
 			sourceTree = "<group>";
 		};
+		04BE2F2529F689F400F7450B /* 加载图片 */ = {
+			isa = PBXGroup;
+			children = (
+				04BE2F452A035A5E00F7450B /* Vacation Photos */,
+				04BE2F2629F68A3800F7450B /* PhotoLoad.h */,
+				04BE2F2729F68A3800F7450B /* PhotoLoad.m */,
+				04BE2F2929F6966300F7450B /* PhotoLoadCollectionViewCell.h */,
+				04BE2F2A29F6966300F7450B /* PhotoLoadCollectionViewCell.m */,
+			);
+			path = "加载图片";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -471,6 +492,7 @@
 			files = (
 				0440907529C2DA4500C5195C /* LaunchScreen.storyboard in Resources */,
 				0440907229C2DA4500C5195C /* Assets.xcassets in Resources */,
+				04BE2F462A035A5E00F7450B /* Vacation Photos in Resources */,
 				0440907029C2DA4200C5195C /* Main.storyboard in Resources */,
 				044090ED29D6B60200C5195C /* Ship.mp4 in Resources */,
 			);
@@ -483,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BE2F2B29F6966300F7450B /* PhotoLoadCollectionViewCell.m in Sources */,
 				0440906D29C2DA4200C5195C /* ViewController.m in Sources */,
 				044090BF29D2C45900C5195C /* Transform3D.m in Sources */,
 				04BE2F1D29E55AFC00F7450B /* Ball.m in Sources */,
@@ -517,6 +540,7 @@
 				044090A529D1710B00C5195C /* Corner.m in Sources */,
 				0440909629CDEB6000C5195C /* CALayerDelegateViewController.m in Sources */,
 				044090A829D1841300C5195C /* shadowPath.m in Sources */,
+				04BE2F2829F68A3800F7450B /* PhotoLoad.m in Sources */,
 				044090AB29D18DF700C5195C /* Mask.m in Sources */,
 				044090D129D3E7FC00C5195C /* TextLayer.m in Sources */,
 				04BE2F2429EE399900F7450B /* DrawViewController.m in Sources */,

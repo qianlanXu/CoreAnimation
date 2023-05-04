@@ -41,6 +41,7 @@
 #import "CustomEasingFunction.h"
 #import "Ball.h"
 #import "DrawViewController.h"
+#import "PhotoLoad.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -66,7 +67,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", @"Transform3D", @"Outer", @"Solid", @"ShaperLayer", @"TextLayer", @"CubeViewController", @"ReplicatorLayer", @"EmitterLayer", @"AVPlayer", @"Transaction", @"Presentation", @"BasicAnimation", @"Ship", @"AnimationGroup", @"Transition", @"CustomTransition", @"MediaTiming", @"Door", @"AnimationTimingFunction", @"CustomEasingFunction", @"Ball", @"DrawView", nil];
+    _titles = [[NSArray alloc] initWithObjects:@"CALayer", @"Resize", @"DrawRect", @"CALayerDelegateViewController", @"Clock", @"zPosition", @"hitTest",@"corner", @"shadowPath", @"Mask", @"LCD", @"ShouldRasterize", @"AffineTransform", @"Transform3D", @"Outer", @"Solid", @"ShaperLayer", @"TextLayer", @"CubeViewController", @"ReplicatorLayer", @"EmitterLayer", @"AVPlayer", @"Transaction", @"Presentation", @"BasicAnimation", @"Ship", @"AnimationGroup", @"Transition", @"CustomTransition", @"MediaTiming", @"Door", @"AnimationTimingFunction", @"CustomEasingFunction", @"Ball", @"DrawView", @"PhotoLoad", nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -192,6 +193,9 @@
         [self.navigationController pushViewController:viewController animated:YES];
     } else if (indexPath.row == 34) {
         DrawViewController *viewController = [[DrawViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if (indexPath.row == 35) {
+        PhotoLoad *viewController = [[PhotoLoad alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
