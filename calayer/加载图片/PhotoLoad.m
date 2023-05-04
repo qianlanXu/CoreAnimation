@@ -29,7 +29,6 @@
     layout.minimumLineSpacing = 40;
     layout.minimumInteritemSpacing = 40;
     layout.itemSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.width);
-   // layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     _collectionView.delegate = self;
